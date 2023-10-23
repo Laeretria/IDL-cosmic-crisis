@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'zigregular';
+    src: url('../font/zig_____-webfont.woff2') format('woff2'),
+         url('../font/zig_____-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*,body{
+    font-family: 'zigregular';
+    background-color: black;
+}
