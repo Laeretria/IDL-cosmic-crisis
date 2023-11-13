@@ -1,16 +1,33 @@
-#bg-home{
+#bg-home {
     width: 100%;
 }
 
-#bg-logo{  
+#bg-logo {
+    position: absolute;
+    top: 22rem;
+    left: 3rem;
     width: 20rem;
+    padding-bottom: 20rem;
+    z-index: 2;
 }
 
-#start-btn{
+.container-home-page {
+    position: relative;
+}
+
+.container-button {
+    text-align: center;
+}
+
+#start-btn {
+    position: absolute;
+    top: 32rem;
+    left: 6.8rem;
     color: white;
     background-color: black;
     border: 1px solid white;
     text-align: center;
     text-decoration: none;
+    z-index: 3;
+    font-size: large;
 }
-
