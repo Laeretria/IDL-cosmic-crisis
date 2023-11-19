@@ -13,7 +13,7 @@
     height: 100vh;
 }
 
-.container-button {
+.container-btn{
     text-align: center;
 }
 
@@ -26,13 +26,7 @@
     margin-bottom: 2vh;
 }
 
-
-a{
-    text-decoration: none;
-}
-
-
-#start-btn {
+.start-button {
     position: relative;
     background-color: black;
     border: 1px solid white;
