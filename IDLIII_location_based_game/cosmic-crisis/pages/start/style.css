@@ -1,29 +1,39 @@
-#bg-home {
-    width: 100%;
-}
-
-#bg-logo {
-    position: absolute;
-    top: 22rem;
-    left: 3rem;
-    width: 20rem;
-    padding-bottom: 20rem;
+.bg-logo {
+    position: relative;
+    margin-top: 35vh;
+    width:80%;
     z-index: 2;
 }
 
-.container-home-page {
-    position: relative;
+.bg-home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .container-button {
     text-align: center;
 }
 
+.cutscene {
+    background-color: #00183F;
+}
+
+.text-lg, .text-a {
+    font-size: 3rem;
+    margin-bottom: 2vh;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
 #start-btn {
-    position: absolute;
-    top: 32rem;
-    left: 6.8rem;
-    color: white;
+    position: relative;
     background-color: black;
     border: 1px solid white;
     text-align: center;
