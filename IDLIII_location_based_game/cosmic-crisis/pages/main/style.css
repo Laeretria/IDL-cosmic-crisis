@@ -1,0 +1,111 @@
+body {
+    height: 100vh;
+    width: 100%;
+}
+/*radar*/
+.spinner {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transition: 200ms all;
+}
+.spinner:hover {
+    transform: scale(1.2);
+}
+.spinner::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: conic-gradient(rgb(0, 26, 37) 70%, #009dc4);
+    animation: spin 3s infinite linear;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 65px;
+    left: 50px;
+    opacity: 0;
+    background-color: #f00;
+    animation: bip 3s infinite linear;
+    animation-delay: 2.2s;
+}
+
+.dot2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    opacity: 0;
+    background-color: #6200ff;
+    animation: bip 3s infinite linear;
+    animation-delay: 2.2s;
+}
+.arc {
+    display: inline-block;
+    border: 1px solid rgba(0, 154, 196, 0.4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.arc:nth-child(2) {
+    width: 25%;
+    height: 25%;
+}
+.arc:nth-child(3) {
+    width: 50%;
+    height: 50%;
+}
+.arc:nth-child(4) {
+    width: 75%;
+    height: 75%;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+   }
+}
+@keyframes bip {
+    0% {
+        opacity: 1;
+   }
+    50%, 100% {
+        opacity: 0;
+   }
+}
+
+/*main screen css*/
+/* h1{
+    font-family: 'audiowide';
+}
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100vh;
+}
+
+.captain{
+    width: 25%;
+}
+
+.stress_meter{
+    width: 25%;
+}
+ */
+
+
+

@@ -1,4 +1,4 @@
-const startButton = document.querySelector('#start-btn');
+/* const startButton = document.querySelector('#start-btn');
 
 startButton.onclick = () => {
   const coordinates = '51.23001101968917, 4.417763301461334'
@@ -12,3 +12,4 @@ startButton.onclick = () => {
 
 
 
+ */
