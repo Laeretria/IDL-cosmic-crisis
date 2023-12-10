@@ -9,29 +9,35 @@
 
     <link href="style.css" type="text/css" rel="stylesheet">
     <link href="../../styles/style.css" type="text/css" rel="stylesheet">
-
+    <script defer src="../../scripts/get-distance.js"></script>
     <script defer src="script.js"></script>
 
 </head>
 
 <body>
-<!--     <div class="captain-container">
-        <h1>B0B</h1>
-        <img class="captain" src="../../images/captain_main.png" alt="captain-main">
-        <img class="stress_meter" src="../../images/stress_meter.gif" alt="gif-stress">
-    </div> -->
-    <div id="radar" class="spinner">
-        <span class="dot"></span>
-        <span class="dot2"></span>
-        <span class="dot3"></span>
-        <span class="dot4"></span>
-        <span class="dot5"></span>
-        <span class="dot6"></span>
-        <span class="arc arc-medium"></span>
-        <span  class="arc arc-large"></span>
-        <span class="arc"></span>
+    <div class="captain-container">
+        <div><img class="stress_meter" src="../../images/stress_meter.gif" alt="gif-stress"></div>
+        <div>
+            <h1 class="name">B0B</h1>
+            <img class="captain" src="../../images/captain_main.png" alt="captain-main">
+        </div>
+        <div><img class="stress_meter_circles" src="../../images/stress_circles.gif" alt="gif-stress-circles"></div>
     </div>
-    <!-- <img class="bg" src="../../images/background2.png"> -->
+    <div class="radar-container">
+        <div id="radar" class="spinner">
+            <span class="dot"></span>
+            <span class="dot2"></span>
+            <span class="dot3"></span>
+            <span class="dot4"></span>
+            <span class="dot5"></span>
+            <span class="dot6"></span>
+            <span class="arc arc-medium"></span>
+            <span class="arc arc-large"></span>
+        </div>
+        <h1 class="name-text distance-text"></h1>
+        <p class="location-text"></p>
+    </div>
+
 </body>
 
 </html>

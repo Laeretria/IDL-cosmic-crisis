@@ -1,15 +1,18 @@
 body {
     height: 100vh;
     width: 100%;
+    margin: 0;
 }
+
 /*radar*/
 .spinner {
-    width: 250px;
-    height: 250px;
+    aspect-ratio : 1 / 1;
+    width: 100%; 
     position: relative;
     border: 1px solid #ffffff;
     border-radius: 50%;
 }
+
 .spinner::before {
     content: "";
     display: inline-block;
@@ -19,6 +22,7 @@ body {
     background-image: conic-gradient(rgb(0, 26, 37) 70%, #009dc4);
     animation: spin 3s infinite linear;
 }
+
 .dot {
     width: 10px;
     height: 10px;
@@ -46,6 +50,7 @@ body {
     animation: bip 3s infinite linear;
     animation-delay: 2.2s;
 }
+
 .dot3 {
     width: 10px;
     height: 10px;
@@ -59,6 +64,7 @@ body {
     animation: bip 3s infinite linear;
     animation-delay: 2.2s;
 }
+
 .dot4 {
     width: 10px;
     height: 10px;
@@ -72,6 +78,7 @@ body {
     animation: bip 3s infinite linear;
     animation-delay: 2.2s;
 }
+
 .dot5 {
     width: 10px;
     height: 10px;
@@ -85,6 +92,7 @@ body {
     animation: bip 3s infinite linear;
     animation-delay: 2.2s;
 }
+
 .dot6 {
     width: 10px;
     height: 10px;
@@ -98,6 +106,7 @@ body {
     animation: bip 3s infinite linear;
     animation-delay: 2.2s;
 }
+
 .arc {
     display: inline-block;
     border: 1px solid rgba(0, 154, 196, 0.4);
@@ -117,41 +126,122 @@ body {
     width: 75%;
     height: 75%;
 }
+
 @keyframes spin {
     100% {
         transform: rotate(360deg);
-   }
+    }
 }
+
 @keyframes bip {
     0% {
         opacity: 1;
-   }
-    50%, 100% {
+    }
+
+    50%,
+    100% {
         opacity: 0;
-   }
+    }
 }
 
 /*main screen css*/
-/* h1{
+
+.captain-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    justify-content: center;
+}
+
+.captain-container>div {
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: minmax(min-content, max-content);
+    overflow: hidden;
+}
+
+.captain {
+    width: 125%;
+}
+
+.stress_meter {
+    width: 200%;
+    margin-top: 2.5rem;
+    margin-right: -3rem
+}
+
+.stress_meter_circles {
+    margin-top: 3em;
+    margin-left: -3rem;
+    width: 280%;
+}
+
+.name {
     font-family: 'audiowide';
+    font-size: 1.2rem;
+    display: flex;
+    justify-self: left;
+    margin-left: 1rem;
+    margin-bottom: -0.5rem;
 }
 
-.bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300%;
-    height: 100vh;
+.radar-container {
+    display: grid;
+    width: 65%;
+    margin-left: 17.5%;
 }
 
-.captain{
-    width: 25%;
+.distance-text{
+    text-align: left;
+    padding-left: 0 !important;
+    margin-bottom: 0;
 }
 
-.stress_meter{
-    width: 25%;
+.location-text {
+    margin-top: 0;
 }
- */
 
+@media only screen and (min-width: 500px) {
+    .name {
+        font-size: 1.6rem;
+    }
 
+    .stress_meter_circles {
+        margin-top: 3.5em;
+        margin-left: -3rem;
+    }
 
+    .stress_meter {
+        margin-top: 3rem;
+        margin-right: -3rem
+    }
+
+}
+
+@media only screen and (min-width: 650px) {
+    .name {
+        font-size: 2rem;
+    }
+
+    .stress_meter_circles {
+        margin-top: 4em;
+        margin-left: -3rem;
+    }
+
+    .stress_meter {
+        margin-top: 3.5rem;
+        margin-right: -3rem
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .stress_meter_circles {
+        margin-top: 4.5em;
+        margin-left: -6.5rem;
+    }
+
+    .stress_meter {
+        margin-top: 4rem;
+        margin-right: -6.5rem
+    }
+}
