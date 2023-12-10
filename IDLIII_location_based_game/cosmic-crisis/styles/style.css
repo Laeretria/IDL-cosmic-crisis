@@ -6,6 +6,7 @@
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'audiowide';
     src: url('../font/Audiowide-Regular.ttf') format('truetype');
@@ -17,10 +18,10 @@ body {
     font-family: 'zigregular';
     color: #FFFFFF;
     background-color: black;
-/*     background-image: url(../images/background2.png);
+    background-image: url(../images/background2.png);
     background-repeat: repeat;
     background-position: center;
-    background-size: 300%; */
+    background-size: 300%;
 }
 
 .captain-text {
@@ -64,7 +65,7 @@ body {
     font-size: 1em;
     padding-left: 2em;
     padding-right: 3em;
-  }
+}
 
 .arrow {
     background-color: #00183F;
