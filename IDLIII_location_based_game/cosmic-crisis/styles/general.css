@@ -1,7 +1,90 @@
-body {
-  color: var(--text-color);
-  background-color: var(--white);
-  font-family: sans-serif;
+@font-face {
+    font-family: 'zigregular';
+    src: url('../font/zig_____-webfont.woff2') format('woff2'),
+        url('../font/zig_____-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'audiowide';
+    src: url('../font/Audiowide-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+.captain-text {
+    color: #0500FF;
+    font-size: 15pt;
+    padding-left: 1.75em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
 
+.name-text {
+    color: #FF7302;
+    font-size: 15pt;
+    padding-top: 1em;
+    padding-left: 1.75em;
+    padding-bottom: 0.5em;
+}
+
+.container2 {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+}
+
+.bg-intro {
+    margin-top: 10vh;
+    width: 100%;
+    height: 70vh;
+    background-color: #00183F;
+}
+
+.text-intro {
+    text-align: left;
+    margin-left: 17.5%;
+    width: 65%;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: zig;
+    background-color: black;
+    background-image: url(../../images/background2.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 300%;
+  }
+  
+  .captain {
+    color: #0500FF;
+    font-size: 15pt;
+    padding-left: 1.75em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+  }
+  
+  .general-text {
+    color: white;
+    font-size: 1em;
+    padding-left: 2em;
+    padding-right: 3em;
+  }
+  
+  .arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 1px;
+  }
+  
+  .arrow img {
+    height: 75%;
+    width: 75%;
+  }
