@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: zig;
+    background-color: black;
+    background-image: url(../../images/background2.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 300%;
+  }
+
+.img {
+  height: 75vh;
+  width: 100%;
+  background-image: url(../../images/parkbrug1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.zna {
+  display: flex;
+  align-items: center;
+}
+
+.zna p {
+  color: white;
+}
+
+  @media screen and (max-width: 550px) {
+    .tile-container {
+      grid-template-rows: 120px 120px;
+      grid-template-columns: 120px 120px;
+    }
+  }
+  

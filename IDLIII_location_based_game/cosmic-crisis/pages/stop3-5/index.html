@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link href="../../styles/reset.css" type="text/css" rel="stylesheet">
+    <link href="../../styles/variables.css" type="text/css" rel="stylesheet">
+    <link href="../../styles/general.css" type="text/css" rel="stylesheet">
+    <link href="../../styles/components/button.css" type="text/css" rel="stylesheet">
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
+    <div class="popup">
+        <h3 class="game-over">GAME OVER</h3>
+        <button class="try-again" onclick="refreshPage()">TRY-AGAIN</button>
+    </div>
+    <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+    <button id="rotate" onclick="rotate()">rotate</button>
+    <div class="buttons">
+        <button id="left" onclick="moveLeft()">left</button>
+        <button id="down" onclick="moveDown()">down</button>
+        <button id="right" onclick="moveRight()">right</button>
+    </div>
+</body>
+</html>

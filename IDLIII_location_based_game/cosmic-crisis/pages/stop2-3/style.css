@@ -1,0 +1,115 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: zig;
+    background-color: black;
+    background-image: url(../../images/background2-green.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 300%;
+    height: 100vh;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container img {
+    width: 80%;
+  }
+  
+  h2 {
+    color: #FF7302;
+    font-size: 15pt;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  .continue {
+    display: inline-block;
+    color: #FE7301;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid #00FF47;
+    cursor: pointer;
+  }
+
+.continue img {
+  height: 50%;
+  width: 50%;
+}
+    
+
+.captain-img {    
+  width: 85%;
+}
+
+.text {
+  height: 100%;
+}
+
+.p-container {
+  background-color: #001901;
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
+}
+
+.captain-container {
+  height: 10%;
+  position: absolute;
+  bottom: 70px;
+}
+
+.captain-container img {
+  width: 40%;
+  padding-left: 1.75em;
+}
+
+.h3-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 60px;
+}
+
+.general-text {
+  font-size: 10pt;
+}
+
+.captain {
+  color: #0500FF;
+  font-size: 15pt;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+.canvas {
+  height: 38vh;
+  width: 38vh;
+  background-image: url(../../images/parkburg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 1em;
+}

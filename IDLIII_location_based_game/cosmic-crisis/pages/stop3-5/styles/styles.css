@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-image: url(../../../images/background2.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 300%;
+    color: #700000;
+}
+
+canvas {
+    border: 2px solid #fff;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: 2em;
+    border-radius: 200px;
+    width: 10em;
+    height: 10em;
+    font-family: zig;
+    text-align: center;
+    font-size: 0.5em;
+    background-color: #0500FF;
+}
+
+.buttons {
+    padding-top: 0.2em;
+}
+
+.popup {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+}
+
+.game-over {
+    color: red;
+    font-size: 2.5em;
+}
+
+.try-again {
+    background-color: red;
+    border-radius: 50px;
+    height: 5em;
+    width: 12em;
+    margin-top: 2em;
+    font-size: 0.8em;
+}
