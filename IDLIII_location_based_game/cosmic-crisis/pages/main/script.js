@@ -1,13 +1,23 @@
-function drawCoordinates(longitude, latitude, color, className) {
-    const topOffset = 70;
-    const multiplier = 2;
-    const parsedLongitude = parseFloat(longitude) * multiplier;
-    const parsedLatitude = topOffset + parseFloat(latitude) * multiplier;
+function drawCoordinates(baseLatitude, baseLongitude, latitude, longitude, color, className) {
+    const precisionMultiplier = 1600;
+    const offsetMultiplier = 10;
+    const parsedBaseLongitude = parseFloat(baseLongitude) * precisionMultiplier;
+    const parsedBaseLatitude = parseFloat(baseLatitude) * precisionMultiplier;
+    const parsedLongitude = parseFloat(longitude) * precisionMultiplier;
+    const parsedLatitude = parseFloat(latitude) * precisionMultiplier;
 
+    const longitudeOffset = ((parsedLongitude - parsedBaseLongitude) * offsetMultiplier) / 2;
+    const latitudeOffset = (parsedBaseLatitude - parsedLatitude) * offsetMultiplier * 2;
+
+    const radar = document.querySelector("#radar");
+    const width = radar.clientWidth;
+    const height = radar.clientHeight;
+    const topOffset = height / 2 - 5;
+    const leftOffset = width / 2 - 5;
 
     const element = document.querySelector(`.${className}`);
-    element.style.top = `${parsedLatitude}px`;
-    element.style.left = `${parsedLongitude}px`;
+    element.style.top = `${topOffset + latitudeOffset}px`;
+    element.style.left = `${leftOffset + longitudeOffset}px`;
     element.style.backgroundColor = color;
 }
 
@@ -20,43 +30,34 @@ const options = {
 function error(err) {
     console.warn('ERROR(' + err.code + '): ' + err.message);
 }
-let locationHasBeenLoaded = false;
 function success(position) {
-    if (locationHasBeenLoaded == false) {
-        document.querySelector(".dot").style.display = "block";
-        document.querySelector(".dot2").style.display = "block";
-/*         document.querySelector(".dot3").style.display = "block";
-        document.querySelector(".dot4").style.display = "block";
-        document.querySelector(".dot5").style.display = "block";
-        document.querySelector(".dot6").style.display = "block";
-        //zna-stop */
-        drawCoordinates("51.23001101968917", "4.417763301461334", "#6200ff", "dot2");
-/*         //park-brug
-        drawCoordinates("51.23067160739562", "4.414336896383585", "#6200ff", "dot3");
-        //mas
-        drawCoordinates("51.230587286583706", "4.413112959178332", "#6200ff", "dot4");
-        //whisperer 
-        drawCoordinates("51.2287694781101", "4.4047231686325174", "#6200ff", "dot5");
-        //havenhuis
-        drawCoordinates("51.22824052866616", "4.406153302731023", "#6200ff", "dot6"); */
-        locationHasBeenLoaded = true;
-    }
+/*     const longitude = position.coords.longitude;
+    const latitude = position.coords.latitude; */
+    const longitude = "4.417180651456513";
+    const latitude = "51.22986488128879";
+    document.querySelector(".dot").style.display = "block";
+    document.querySelector(".dot2").style.display = "block";
+    document.querySelector(".dot3").style.display = "block";
+    document.querySelector(".dot4").style.display = "block";
+    document.querySelector(".dot5").style.display = "block";
+    document.querySelector(".dot6").style.display = "block";
 
-    const longitude = position.coords.longitude;
-    const latitude = position.coords.latitude;
-
-    console.log(longitude);
-    console.log(latitude);
-
-    drawCoordinates(longitude, latitude, "#ffffff", "dot");
-
+    drawCoordinates(latitude, longitude, latitude, longitude, "#ffffff", "dot");
+    //zna-cadix
+    drawCoordinates(latitude, longitude, "51.2307055354974", "4.414559615920932", "green", "dot2");
+    //park-brug
+    drawCoordinates(latitude, longitude, "51.230584764997616", "4.413111138538661", "grey", "dot3");
+    //mas
+    drawCoordinates(latitude, longitude, "51.22893720876868", "4.404670093096004", "red", "dot4");
+    //whisperer 
+    drawCoordinates(latitude, longitude, "51.22824318132135", "4.406100184553811", "brown", "dot5");
+    //havenhuis
+    drawCoordinates(latitude, longitude, "51.23145696081982", "4.407370113413155", "blue", "dot6");
 }
 document.querySelector(".dot").style.display = "none";
 document.querySelector(".dot2").style.display = "none";
-/* document.querySelector(".dot3").style.display = "none";
+document.querySelector(".dot3").style.display = "none";
 document.querySelector(".dot4").style.display = "none";
 document.querySelector(".dot5").style.display = "none";
-document.querySelector(".dot6").style.display = "none"; */
+document.querySelector(".dot6").style.display = "none";
 navigator.geolocation.watchPosition(success, error, options);
-
-
