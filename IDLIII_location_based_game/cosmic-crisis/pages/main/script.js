@@ -1,3 +1,15 @@
+//navigation
+const coordinatesMap = {
+    "zna-cadix": ["51.2307055354974", "4.414559615920932"],
+}
+
+const stopHtmlMap = {
+    "zna-cadix": "../stop1-zna/stop1-1/index.html"
+}
+
+const stops = ["zna-cadix", "parkbrug", "mas", "whisperer", "havenhuis"];
+if(localStorage.getItem("stop") === null) localStorage.setItem("stop", 0);
+
 function drawCoordinates(baseLatitude, baseLongitude, latitude, longitude, color, className) {
     const precisionMultiplier = 1600;
     const offsetMultiplier = 10;
@@ -53,6 +65,14 @@ function success(position) {
     drawCoordinates(latitude, longitude, "51.22824318132135", "4.406100184553811", "brown", "dot5");
     //havenhuis
     drawCoordinates(latitude, longitude, "51.23145696081982", "4.407370113413155", "blue", "dot6");
+
+    const stopCoordinates = coordinatesMap[stops[localStorage.getItem("stop")]];
+    const distance = getDistance(latitude, longitude, stopCoordinates[0], stopCoordinates[1]).distance;
+    document.getElementsByClassName("distance-text")[0].innerText = distance.toString() + "m";
+    document.getElementsByClassName("location-text")[0].innerText = "Navigeer naar " + stops[localStorage.getItem("stop")];
+    if(distance <= 250) {
+        location.assign(stopHtmlMap[stops[localStorage.getItem("stop")]]);
+    } 
 }
 document.querySelector(".dot").style.display = "none";
 document.querySelector(".dot2").style.display = "none";
@@ -61,3 +81,8 @@ document.querySelector(".dot4").style.display = "none";
 document.querySelector(".dot5").style.display = "none";
 document.querySelector(".dot6").style.display = "none";
 navigator.geolocation.watchPosition(success, error, options);
+
+
+
+//const previousStop = localStorage.getItem("stop");
+//localStorage.setItem("stop", previousStop+1);
