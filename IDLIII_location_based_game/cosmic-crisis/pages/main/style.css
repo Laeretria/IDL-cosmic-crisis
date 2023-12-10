@@ -1,13 +1,13 @@
 body {
-    height: 100vh;
     width: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /*radar*/
 .spinner {
-    aspect-ratio : 1 / 1;
-    width: 100%; 
+    width: 300px;
+    height: 300px;
     position: relative;
     border: 1px solid #ffffff;
     border-radius: 50%;
@@ -151,6 +151,7 @@ body {
     grid-template-columns: 1fr 2fr 1fr;
     width: 100%;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .captain-container>div {
@@ -160,7 +161,7 @@ body {
     overflow: hidden;
 }
 
-.captain {
+.captain-image {
     width: 125%;
 }
 
@@ -187,17 +188,23 @@ body {
 
 .radar-container {
     display: grid;
-    width: 65%;
-    margin-left: 17.5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    justify-items: center;
 }
 
-.distance-text{
+.distance-text {
+    display: flex;
+    justify-self: start;
     text-align: left;
     padding-left: 0 !important;
     margin-bottom: 0;
 }
 
 .location-text {
+    display: flex;
+    justify-self: start;
     margin-top: 0;
 }
 
@@ -216,6 +223,19 @@ body {
         margin-right: -3rem
     }
 
+    .spinner {
+        width: 400px;
+        height: 400px;
+    }
+
+    .distance-text {
+        font-size: 2rem !important;
+    }
+
+    .location-text {
+        font-size: 2rem;
+    }
+
 }
 
 @media only screen and (min-width: 650px) {
@@ -232,6 +252,11 @@ body {
         margin-top: 3.5rem;
         margin-right: -3rem
     }
+
+    .spinner {
+        width: 480px;
+        height: 480px;
+    }
 }
 
 @media only screen and (min-width: 900px) {
@@ -243,5 +268,34 @@ body {
     .stress_meter {
         margin-top: 4rem;
         margin-right: -6.5rem
+    }
+
+    .spinner {
+        width: 550px;
+        height: 550px;
+    }
+
+    .dot, .dot2, .dot3, .dot4, .dot5, .dot6 {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .spinner {
+        width: 650px;
+        height: 650px;
+    }
+
+    .distance-text {
+        font-size: 3rem !important;
+    }
+
+    .location-text {
+        font-size: 3rem;
     }
 }

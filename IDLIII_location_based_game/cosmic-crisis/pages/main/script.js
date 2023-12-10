@@ -1,14 +1,22 @@
 //navigation
 const coordinatesMap = {
     "zna-cadix": ["51.2307055354974", "4.414559615920932"],
+    "parkbrug": ["51.230584764997616", "4.413111138538661"],
+    "mas": ["51.22893720876868", "4.404670093096004"],
+    "whisperer": ["51.22824318132135", "4.406100184553811"],
+    "havenhuis": ["51.23145696081982", "4.407370113413155"]
 }
 
 const stopHtmlMap = {
-    "zna-cadix": "../stop1-zna/stop1-1/index.html"
+    "zna-cadix": "../stop1-1/index.html",
+    "parkbrug": "../stop2-1/index.html",
+    "mas": "../stop3-1/index.html",
+    "whisperer": "../stop4-1/index.html",
+    "havenhuis": "../good-ending/ending/cutscene1.html"
 }
 
 const stops = ["zna-cadix", "parkbrug", "mas", "whisperer", "havenhuis"];
-if(localStorage.getItem("stop") === null) localStorage.setItem("stop", 0);
+
 
 function drawCoordinates(baseLatitude, baseLongitude, latitude, longitude, color, className) {
     const precisionMultiplier = 1600;
@@ -43,7 +51,8 @@ function error(err) {
     console.warn('ERROR(' + err.code + '): ' + err.message);
 }
 function success(position) {
-/*     const longitude = position.coords.longitude;
+/*     //current location for watch position
+    const longitude = position.coords.longitude;
     const latitude = position.coords.latitude; */
     const longitude = "4.417180651456513";
     const latitude = "51.22986488128879";
@@ -58,19 +67,19 @@ function success(position) {
     //zna-cadix
     drawCoordinates(latitude, longitude, "51.2307055354974", "4.414559615920932", "green", "dot2");
     //park-brug
-    drawCoordinates(latitude, longitude, "51.230584764997616", "4.413111138538661", "grey", "dot3");
+    drawCoordinates(latitude, longitude, "51.230584764997616", "4.413111138538661", "orange", "dot3");
     //mas
     drawCoordinates(latitude, longitude, "51.22893720876868", "4.404670093096004", "red", "dot4");
     //whisperer 
-    drawCoordinates(latitude, longitude, "51.22824318132135", "4.406100184553811", "brown", "dot5");
+    drawCoordinates(latitude, longitude, "51.22824318132135", "4.406100184553811", "yellow", "dot5");
     //havenhuis
     drawCoordinates(latitude, longitude, "51.23145696081982", "4.407370113413155", "blue", "dot6");
 
     const stopCoordinates = coordinatesMap[stops[localStorage.getItem("stop")]];
     const distance = getDistance(latitude, longitude, stopCoordinates[0], stopCoordinates[1]).distance;
     document.getElementsByClassName("distance-text")[0].innerText = distance.toString() + "m";
-    document.getElementsByClassName("location-text")[0].innerText = "Navigeer naar " + stops[localStorage.getItem("stop")];
-    if(distance <= 250) {
+    document.getElementsByClassName("location-text")[0].innerText = "Navigate to " + stops[localStorage.getItem("stop")];
+    if(distance <= 20) {
         location.assign(stopHtmlMap[stops[localStorage.getItem("stop")]]);
     } 
 }

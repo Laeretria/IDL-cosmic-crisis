@@ -57,10 +57,11 @@ a {
 body {
     font-family: zig;
     background-color: black;
-    background-image: url(../../images/background2.png);
+    background-image: url(../images/background2.png);
     background-repeat: repeat;
     background-position: center;
     background-size: 300%;
+    color: white;
   }
   
   .captain {
