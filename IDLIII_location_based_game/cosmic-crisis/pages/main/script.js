@@ -51,11 +51,11 @@ function error(err) {
     console.warn('ERROR(' + err.code + '): ' + err.message);
 }
 function success(position) {
-/*     //current location for watch position
+    //current location for watch position
     const longitude = position.coords.longitude;
-    const latitude = position.coords.latitude; */
-    const longitude = "4.417180651456513";
-    const latitude = "51.22986488128879";
+    const latitude = position.coords.latitude;
+/*     const longitude = "4.417180651456513";
+    const latitude = "51.22986488128879"; */
     document.querySelector(".dot").style.display = "block";
     document.querySelector(".dot2").style.display = "block";
     document.querySelector(".dot3").style.display = "block";

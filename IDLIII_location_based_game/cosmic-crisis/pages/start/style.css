@@ -5,10 +5,6 @@
     z-index: 2;
 }
 
-body{
-    background-image: none;
-}
-
 .bg-home{
     position: absolute;
     top: 0;
@@ -17,24 +13,8 @@ body{
     height: 100vh;
 }
 
-.img-6{
-    width: 125%;
-    margin-left: -1rem;
-}
-
-.img-3{
-    width: 120%;
-    margin-left: -3rem;
-}
-
-.img-4{
-    width: 120%;
-    margin-left: -3rem;
-}
-
-.img-5{
-    width: 120%;
-    margin-left: -3rem;
+.home{
+    background-image: none;
 }
 
 .container-btn{
