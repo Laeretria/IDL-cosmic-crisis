@@ -10,4 +10,4 @@ function callback(base64) {
   }
   
 
-startCamera(true, '#video', '.canvas', '.continue', callback);
+startCamera(false, '#video', '.canvas', '.continue', callback);

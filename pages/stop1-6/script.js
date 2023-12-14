@@ -8,7 +8,6 @@ const heading = document.querySelector('.js-heading');
 const tileContainer = document.querySelector('.js-container');
 
 function resetGame(text) {
-  alert(text);
   sequence = [];
   humanSequence = [];
   level = 0;
@@ -65,7 +64,7 @@ function nextRound() {
   sequence = [...nextSequence];
   setTimeout(() => {
     humanTurn(level);
-  }, level * 600 + 1000);
+  }, level * 600 + 250);
 }
 
 function handleClick(tile) {
@@ -82,7 +81,6 @@ function handleClick(tile) {
 
   if (humanSequence.length === sequence.length) {
     if (humanSequence.length === 5) {
-      resetGame('Congrats! You completed all the levels');
       window.location.href = '../stop1-7/index.html';
       return
     }
@@ -91,7 +89,7 @@ function handleClick(tile) {
     info.textContent = 'Success! Keep going!';
     setTimeout(() => {
       nextRound();
-    }, 1000);
+    }, 750);
     return;
   }
 
