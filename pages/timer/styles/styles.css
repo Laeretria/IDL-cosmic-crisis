@@ -1,13 +1,3 @@
-body {
-    background-color: black;
-    font-family: 'Zig';
-}
-
-@font-face {
-    font-family: 'YourCustomFont';
-    src: url('your-custom-font.Zig') format('Zig');
-}
-
 #timer-container {
     text-align: center;
     margin-top: 50px;
@@ -26,7 +16,6 @@ body {
     height: 140px;
 }
 
-.code {}
 
 .codeRectangle {
     width: 750px;
@@ -191,4 +180,54 @@ body {
     margin-top: 100px;
     width: 400px;
     height: auto;
+}
+  
+  body {
+    font-family: 'zig';
+    background-color: black;
+    background-image: url(../../../images/background2-green.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 300%;
+    height: 100vh;
+    color: white;
+  }
+
+.p-container {
+  background-color: #001901;
+  padding-top: 10.2em;
+  padding-bottom: 5em;
+}
+
+.captain-container {
+  height: 20%;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+}
+
+.general-text{
+    padding-left: 8%;
+    font-size: 2em !important;
+}
+
+.captain-container img {
+  width: 75%;
+  padding-left: 1.75em;
+  margin-bottom: 15em;
+}
+
+.h3-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 60px;
+}
+
+.captain {
+  color: #0500FF;
+  font-size: 15pt;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
 }

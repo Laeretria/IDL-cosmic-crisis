@@ -19,6 +19,12 @@ const stops = ["zna-cadix", "parkbrug", "mas", "whisperer", "havenhuis"];
 
 document.getElementById("timer-container").style.display="block";
 
+if(localStorage.getItem("stop") === "4") {
+    document.getElementById("timer-container").style.display="block";
+    if(localStorage.getItem("timeRemaining") === null) {
+        localStorage.setItem("timeRemaining", 600);
+    }
+}
 
 function drawCoordinates(baseLatitude, baseLongitude, latitude, longitude, color, className) {
     const precisionMultiplier = 1600;

@@ -1,0 +1,30 @@
+.bg-logo {
+    position: relative;
+    margin-top: 35vh;
+    margin-left: 2rem;
+    width:80%;
+    z-index: 2;
+}
+
+.bg-home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.home{
+    background-image: none;
+    overflow: hidden;
+}
+
+a{
+    background-color: #00183F;
+}
+
+
+body{
+
+    background-image: none;
+}
