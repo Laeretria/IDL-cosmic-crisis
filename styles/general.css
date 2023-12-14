@@ -6,6 +6,7 @@
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'audiowide';
     src: url('../font/Audiowide-Regular.ttf') format('truetype');
@@ -43,11 +44,11 @@
     height: 100%;
 }
 
-.cutscenes{
+.cutscenes {
     background-color: #00183F;
 }
 
-.container-image-cutscene{
+.container-image-cutscene {
     height: 55vh;
     width: 100vw;
 }
@@ -72,30 +73,48 @@ body {
     background-position: center;
     background-size: 300%;
     color: white;
-  }
-  
-  .captain {
+}
+
+.captain {
     color: #0500FF;
     font-size: 15pt;
     padding-left: 1.75em;
     padding-top: 1em;
     padding-bottom: 0.5em;
-  }
-  
-  .general-text {
+}
+
+.general-text {
     color: white;
     font-size: 1em;
     padding-left: 2em;
     padding-right: 3em;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     position: absolute;
     bottom: 20px;
     right: 1px;
-  }
-  
-  .arrow img {
+}
+
+.arrow img {
     height: 75%;
     width: 75%;
-  }
+}
+
+#timer-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#timer {
+    font-size: 5em;
+    color: white;
+    position: absolute;
+    margin-left: 375px;
+    margin-top: 30px;
+}
+
+#clock {
+    width: 500px;
+    height: 140px;
+}

@@ -1,0 +1,194 @@
+body {
+    background-color: black;
+    font-family: 'Zig';
+}
+
+@font-face {
+    font-family: 'YourCustomFont';
+    src: url('your-custom-font.Zig') format('Zig');
+}
+
+#timer-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#timer {
+    font-size: 5em;
+    color: white;
+    position: absolute;
+    margin-left: 375px;
+    margin-top: 30px;
+}
+
+#clock {
+    width: 500px;
+    height: 140px;
+}
+
+.code {}
+
+.codeRectangle {
+    width: 750px;
+    height: 1000px;
+    border: solid;
+    border-color: rgb(21, 236, 21);
+    border-width: 8px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 125px;
+}
+
+#innerBorder {
+    width: 90%;
+    margin-left: 35px;
+    margin-top: 35px;
+}
+
+.typeCode {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.33% - 85px));
+    grid-template-rows: repeat(4, auto);
+    gap: 75px;
+    width: 100%;
+    margin-left: 35px;
+    margin-top: 35px;
+}
+
+#codeType1{
+    height: 150%;
+}
+
+#codeType2{
+    height: 150%;
+}
+
+#codeType3{
+    height: 150%;
+}
+
+#codeType4{
+    height: 150%;
+}
+#codeType5{
+    height: 150%;
+}
+
+#codeType6{
+    height: 150%;
+}
+
+#codeType7{
+    height: 150%;
+}
+#codeType8{
+    height: 150%;
+}
+#codeType9{
+    height: 150%;
+}
+
+#codeType10{
+    height: 150%;
+}
+
+#codeTypeLong{
+    height: 150%;
+}
+
+.codeTypeLong {
+    grid-row: span 2;
+}
+
+#captainSmall{
+    width: 40%;
+}
+
+.dialogueBox{
+    background-color: #002201;
+    opacity: 75%;
+    height: 266px;
+    width: 980px;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.rectangle1{
+    height: 125px;
+    width: 175px;
+    background-color: green;
+    mask-image: url(/img/codeType.png);
+}
+
+.correct{
+    position: absolute;
+    z-index: 1;
+    margin-bottom: 150px;
+}
+
+.greenOverlay{
+    width: fit-content;
+    width: max-content;
+    height: auto;
+    background-color: #298100;
+    opacity: 25%;
+    position: absolute;
+    z-index: 2;
+}
+
+.greenCorrect{
+    width: 980px;
+    height: 600px;
+    background-color: #24FF00;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -136%);
+    z-index: 3;
+}
+
+#correctCode{
+    margin-left: 90px;
+    margin-top: 150px;
+    width: 800px;
+    height: auto;
+}
+
+#repairButton{
+    margin-left: 275px;
+    margin-top: 100px;
+    width: 400px;
+    height: auto;
+}
+
+.error{
+    position: absolute;
+    z-index: 1;
+    margin-bottom: 150px;
+}
+
+.redError{
+    width: 980px;
+    height: 600px;
+    background-color: #FF0000;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -136%);
+    z-index: 3;
+    opacity: 80%;
+}
+
+#errorCode{
+    margin-left: 90px;
+    margin-top: 150px;
+    width: 800px;
+    height: auto;
+}
+
+#retry{
+    margin-left: 275px;
+    margin-top: 100px;
+    width: 400px;
+    height: auto;
+}
