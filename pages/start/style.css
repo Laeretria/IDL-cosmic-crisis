@@ -15,6 +15,7 @@
 
 .home{
     background-image: none;
+    overflow: hidden;
 }
 
 .container-btn{
@@ -31,7 +32,7 @@
 }
 
 .start-button {
-    font-family: 'zigregular';
+    font-family: 'zig';
     position: relative;
     background-color: black;
     border: 1px solid white;
@@ -43,4 +44,9 @@
 
 a{
     background-color: #00183F;
+}
+
+body{
+    background-color: #00183F;
+    background-image: none;
 }

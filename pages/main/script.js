@@ -79,7 +79,7 @@ function success(position) {
     const distance = getDistance(latitude, longitude, stopCoordinates[0], stopCoordinates[1]).distance;
     document.getElementsByClassName("distance-text")[0].innerText = distance.toString() + "m";
     document.getElementsByClassName("location-text")[0].innerText = "Navigate to " + stops[localStorage.getItem("stop")];
-    if(distance <= 20) {
+    if(distance <= 50) {
         location.assign(stopHtmlMap[stops[localStorage.getItem("stop")]]);
     } 
 }
