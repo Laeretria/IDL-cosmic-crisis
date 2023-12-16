@@ -12,11 +12,16 @@ const stopHtmlMap = {
     "parkbrug": "../stop2-1/index.html",
     "mas": "../stop3-1/index.html",
     "whisperer": "../stop4-1/index.html",
-    "havenhuis": "../good-ending/ending/cutscene1.html"
+    "havenhuis": "../stop5-1/index.html"
 }
 
 const stops = ["zna-cadix", "parkbrug", "mas", "whisperer", "havenhuis"];
 
+
+if(localStorage.getItem("stop") === "4") {
+    document.getElementById("timer-container").style.display="block";
+    if(localStorage.getItem("shouldStartTimer") === null) localStorage.setItem("shouldStartTimer", true);
+}
 
 function drawCoordinates(baseLatitude, baseLongitude, latitude, longitude, color, className) {
     const precisionMultiplier = 1600;

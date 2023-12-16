@@ -23,6 +23,7 @@
     justify-self: flex-end;
     height: 55px;
     margin-top: -65px;
+    margin-right: 5px;
 }
 
 .last-arrow{
@@ -33,7 +34,7 @@
     text-align: center;
 }
 
-.cutscene {
+.cutscenes {
     background-color: #00183F;
 }
 
