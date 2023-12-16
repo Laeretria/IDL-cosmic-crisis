@@ -103,18 +103,28 @@ body {
 
 #timer-container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
+    position: absolute;
+    width: 50%;
+    height: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #timer {
-    font-size: 5em;
-    color: white;
     position: absolute;
-    margin-left: 375px;
-    margin-top: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    color: white;
 }
 
 #clock {
-    width: 500px;
-    height: 140px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
 }

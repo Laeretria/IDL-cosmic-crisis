@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+#timer-container{
+    display: none ;
+}
+
 /*radar*/
 .spinner {
     width: 280px;

@@ -1,4 +1,4 @@
-let timeRemaining = 600;
+let timeRemaining = localStorage.getItem("timeRemaining");
 
 function updateTimer() {
     const minutes = Math.floor(timeRemaining / 60);
@@ -7,12 +7,19 @@ function updateTimer() {
     document.getElementById('timer').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 
     if (timeRemaining === 0) {
-        alert('Time is up!');
+        location.assign("/pages/timer/time-up.html");
     } else {
         timeRemaining--;
     }
 }
 
-setInterval(updateTimer, 1000);
+function storeTimeRemaining() {
+    localStorage.setItem("timeRemaining", timeRemaining);
+}
+if(localStorage.getItem("shouldStartTimer") !== null) {
+    setInterval(updateTimer, 1000);
+    setInterval(storeTimeRemaining, 1000);
+    localStorage.setItem("shouldStartTimer", false);
+}
 
-updateTimer();
+
