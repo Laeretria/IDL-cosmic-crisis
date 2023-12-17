@@ -15,12 +15,24 @@ const stopHtmlMap = {
     "havenhuis": "../stop5-1/index.html"
 }
 
+const stopColorMap = {
+    "0": "green",
+    "1": "orange",
+    "2": "red",
+    "3": "yellow",
+    "4": "blue"
+}
+
 const stops = ["zna-cadix", "parkbrug", "mas", "whisperer", "havenhuis"];
 
 
 if(localStorage.getItem("stop") === "4") {
     document.getElementById("timer-container").style.display="block";
-    if(localStorage.getItem("shouldStartTimer") === null) localStorage.setItem("shouldStartTimer", true);
+    
+    if(localStorage.getItem("shouldStartTimer") === null) {
+        localStorage.setItem("shouldStartTimer", true);
+        localStorage.setItem("timeRemaining", 600)
+    } 
 }
 
 function drawCoordinates(baseLatitude, baseLongitude, latitude, longitude, color, className) {
@@ -59,8 +71,6 @@ function success(position) {
     //current location for watch position
     const longitude = position.coords.longitude;
     const latitude = position.coords.latitude;
-/*     const longitude = "4.417180651456513";
-    const latitude = "51.22986488128879"; */
     document.querySelector(".dot").style.display = "block";
     document.querySelector(".dot2").style.display = "block";
     document.querySelector(".dot3").style.display = "block";
@@ -83,10 +93,17 @@ function success(position) {
     const stopCoordinates = coordinatesMap[stops[localStorage.getItem("stop")]];
     const distance = getDistance(latitude, longitude, stopCoordinates[0], stopCoordinates[1]).distance;
     document.getElementsByClassName("distance-text")[0].innerText = distance.toString() + "m";
-    document.getElementsByClassName("location-text")[0].innerText = "Navigate to " + stops[localStorage.getItem("stop")];
+    document.getElementsByClassName("location-text")[0].innerHTML = "Navigate to <span id='location-colored'> " + stops[localStorage.getItem("stop")] + "</span>";
+    document.getElementById('location-colored').style.color = stopColorMap[localStorage.getItem("stop")];
     if(distance <= 50) {
         location.assign(stopHtmlMap[stops[localStorage.getItem("stop")]]);
-    } 
+    }  
+}
+
+
+
+if(localStorage.getItem("stop") !== null){
+    document.getElementsByClassName("distance-text")[0].style.color=stopColorMap[localStorage.getItem("stop")];
 }
 document.querySelector(".dot").style.display = "none";
 document.querySelector(".dot2").style.display = "none";

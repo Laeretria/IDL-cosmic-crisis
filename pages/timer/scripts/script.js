@@ -6,7 +6,7 @@ function updateTimer() {
 
     document.getElementById('timer').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 
-    if (timeRemaining === 0) {
+    if (timeRemaining <= 0) {
         location.assign("/pages/timer/time-up.html");
     } else {
         timeRemaining--;

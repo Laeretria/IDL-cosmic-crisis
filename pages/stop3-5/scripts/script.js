@@ -1,7 +1,7 @@
 const canvas = document.getElementById('tetrisCanvas');
 const context = canvas.getContext('2d');
 
-const ROWS = 20;
+const ROWS = 16;
 const COLUMNS = 10;
 const BLOCK_SIZE = 30;
 const EMPTY = 'black';

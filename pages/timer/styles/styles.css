@@ -1,3 +1,11 @@
+body {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
 .codeRectangle {
     width: 750px;
     height: 1000px;
@@ -193,16 +201,10 @@
 }
 
 .captain-container img {
-  width: 75%;
+    top: 8em;
+  width: 40%;
   padding-left: 1.75em;
-  margin-bottom: 15em;
-}
-
-.h3-container {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  bottom: 60px;
+  position: relative;
 }
 
 .captain {

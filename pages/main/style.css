@@ -205,7 +205,6 @@ body {
 }
 
 .location-text {
-    display: flex;
     justify-self: start;
     margin-top: 0;
 }
