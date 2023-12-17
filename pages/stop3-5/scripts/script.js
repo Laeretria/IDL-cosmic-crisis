@@ -6,11 +6,6 @@ const COLUMNS = 10;
 const BLOCK_SIZE = 30;
 const EMPTY = 'black';
 const FILLED = 'red'; // Color for filled lines
-const cheat = document.getElementById('continue');
-
-cheat.onclick = () => {
-    window.location.href = '../../pages/stop3-6/index.html';
-}
 
 let board = [];
 let currentTetrimino = null;
