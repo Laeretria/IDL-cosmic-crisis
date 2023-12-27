@@ -1,5 +1,5 @@
 const div = document.querySelector(".general-text");
-const text = "wait...? i know this place, i think i've seen it on space TV!";
+const text = "i have reached our ship! let’s repair it before J3ff shows up.";
 
 function textTypingEffect(element, text, i = 0) {
     element.textContent += text[i];

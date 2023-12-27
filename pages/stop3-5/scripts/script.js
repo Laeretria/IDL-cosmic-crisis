@@ -245,7 +245,7 @@ function checkLinesAndRedirect() {
         }
     }
 
-    if (filledLines >= 5) {
+    if (filledLines >= 4) {
         // Redirect to the next page or perform any other action
         window.location.href = '../../pages/stop3-6/index.html'; // Change the URL to the next page
     }

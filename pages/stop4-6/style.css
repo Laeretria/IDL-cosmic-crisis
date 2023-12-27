@@ -24,7 +24,7 @@ html {
   }
 
 .img {
-  height: 75vh;
+  height: 65vh;
   width: 100%;
   background-image: url(../../images/JEFF-NEUTRAL.png);
   background-repeat: no-repeat;
@@ -47,6 +47,7 @@ html {
   padding-top: 1em;
   padding-left: 1.75em;
   padding-bottom: 0.5em;
+  width: 100vw;
 }
 
   @media screen and (max-width: 550px) {
