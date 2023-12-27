@@ -23,11 +23,28 @@
         <div class="container2 cutscene">
             <div class="container-image-cutscene"><img class="bg-intro" src="../../../images/Cutscene_2.png"></div>
         
-            <p class="text-intro">I can’t wait to arrive at uranus for a long awaited vacation,
-                i heard it’s extra cold this time of the year.</p>
+            <p class="text-intro"></p>
         </div>
     </a>
 
+
+
+    <script>
+        const div = document.querySelector(".text-intro");
+        const text = "I can’t wait to arrive at uranus for a long awaited vacation, i heard it’s extra cold this time of the year.";
+        
+        function textTypingEffect(element, text, i = 0) {
+            element.textContent += text[i];
+        
+            if (i === text.length - 1) {
+                return;
+            }
+        
+            setTimeout(() => textTypingEffect(element, text, i + 1), 25);
+        }
+        
+        textTypingEffect(div, text)
+    </script>
 </body>
 
 </html>

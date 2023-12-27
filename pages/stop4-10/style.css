@@ -24,7 +24,7 @@ html {
   }
 
 .img {
-  height: 75vh;
+  height: 65vh;
   width: 100%;
   background-image: url(../../images/USER-SURPRISED.png);
   background-repeat: no-repeat;
@@ -47,6 +47,7 @@ html {
   padding-top: 1em;
   padding-left: 1.75em;
   padding-bottom: 0.5em;
+  width: 100vw;
 }
 
   @media screen and (max-width: 550px) {
@@ -62,4 +63,22 @@ span {
 
 .container {
   width: 100%;
+}
+
+.general-text-lg {
+  font-size: 30pt;
+  color: white;
+  padding-left: 0.8em;
+  padding-right: 3em;
+  line-height: 1.25em;
+  width: 100%;
+  animation: jiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes jiggle {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
 }

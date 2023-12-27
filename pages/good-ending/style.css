@@ -43,6 +43,11 @@
     margin-bottom: 2vh;
 }
 
+.text-lg2 {
+    font-size: 1.8rem;
+    margin-bottom: 2vh;
+}
+
 .start-button {
     font-family: 'zig';
     position: relative;
@@ -62,4 +67,5 @@ a{
 body{
 
     background-image: none;
+    overflow: hidden;
 }

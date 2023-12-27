@@ -23,12 +23,37 @@
         <div class="container2 cutscene">
             <div class="container-image-cutscene"><img class="bg-intro" src="../../../images/Cutscene_5.png"></div>
             
-            <p class="text-intro text-lg text-a">aaaaaa <br>
-                aaaaaa <br>
-                aaaaaa</p>
+            <p class="text-intro text-lg text-a jiggle-text"></p>
         </div>
     </a>
 
+
+
+    <script>
+        const div = document.querySelector(".text-intro");
+        const text = `aaaaaa <br> aaaaaa <br> aaaaaa`;
+        
+        function textTypingEffect(element, text, i = 0) {
+            const cleanedText = text.replace(/<br>/g, '');
+            element.innerHTML += cleanedText[i];
+        
+            if (i === cleanedText.length - 1) {
+                return;
+            }
+        
+            setTimeout(() => textTypingEffect(element, text, i + 1), 25);
+        }
+        
+        textTypingEffect(div, text)
+
+
+
+        function toggleJiggle() {
+            text2.classList.toggle('jiggle-text');
+            }
+            setTimeout(toggleJiggle, 3000);
+        
+    </script>    
 </body>
 
 </html>

@@ -23,10 +23,27 @@
     <a href="../../thankyou/index.html"">
         <div class="container2 cutscene">
             <div class="container-image-cutscene"><img class="bg-intro" src="../../../images/goodEnding8.png"></div>
-            <p class="text-intro text-lg">*sigh*</p>
+            <p class="text-intro text-lg"></p>
         </div>
     </a>
 
+
+    <script>
+        const div = document.querySelector(".text-intro");
+        const text = "*sigh*";
+        
+        function textTypingEffect(element, text, i = 0) {
+            element.textContent += text[i];
+        
+            if (i === text.length - 1) {
+                return;
+            }
+        
+            setTimeout(() => textTypingEffect(element, text, i + 1), 25);
+        }
+        
+        textTypingEffect(div, text)
+    </script>
 </body>
 
 </html>

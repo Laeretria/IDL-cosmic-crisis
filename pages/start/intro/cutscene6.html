@@ -22,12 +22,30 @@
         <div class="container2 cutscene last-arrow">
             <div class="container-image-cutscene"><img class="bg-intro" src="../../../images/Cutscene_6.png"></div>
             
-            <p class="text-intro">i have heard of this place before, i think it’s called...erf.</p>
+            <p class="text-intro"></p>
             <a id="navigate-main" class="arrow-cutscene-6">
                 <img src="../../../images/arrow.png" alt="arrow">
               </a>
         </div>
 
+
+
+        <script>
+            const div = document.querySelector(".text-intro");
+            const text = "i have heard of this place before, i think it’s called...erf.";
+            
+            function textTypingEffect(element, text, i = 0) {
+                element.textContent += text[i];
+            
+                if (i === text.length - 1) {
+                    return;
+                }
+            
+                setTimeout(() => textTypingEffect(element, text, i + 1), 25);
+            }
+            
+            textTypingEffect(div, text)
+        </script>        
 </body>
 
 </html>
