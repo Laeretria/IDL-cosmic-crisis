@@ -192,7 +192,6 @@ body {
 .radar-container {
     display: grid;
     width: 80%;
-    margin-left: 10%;
     justify-items: center;
 }
 
@@ -202,11 +201,13 @@ body {
     text-align: left;
     padding-left: 0 !important;
     margin-bottom: 0;
+    margin-left: 10%;
 }
 
 .location-text {
     justify-self: start;
     margin-top: 0;
+    margin-left: 10%;
 }
 
 #timer-container {
