@@ -22,10 +22,13 @@
 
     <a href="cutscene2.html">
         <div class="container2 cutscene">
-            <div class="container-image-cutscene"><img class="bg-intro" src="../../../images/ending-cutscene-2.png"></div>
-            
-            <p class="text-intro text-lg"></p>
-            <p class=" text-intro txtContinue">tap to continue</p>
+            <div class="container-image-cutscene"><img class="bg-intro" src="../../../images/ending-cutscene-2.png">
+            </div>
+            <div>
+                <p class="text-intro text-lg"></p>
+                <p class=" text-intro txtContinue">tap to continue</p>
+            </div>
+
         </div>
     </a>
 
@@ -33,17 +36,17 @@
     <script>
         const div = document.querySelector(".text-intro");
         const text = "quick let’s enter!";
-        
+
         function textTypingEffect(element, text, i = 0) {
             element.textContent += text[i];
-        
+
             if (i === text.length - 1) {
                 return;
             }
-        
+
             setTimeout(() => textTypingEffect(element, text, i + 1), 25);
         }
-        
+
         textTypingEffect(div, text)
     </script>
 </body>
