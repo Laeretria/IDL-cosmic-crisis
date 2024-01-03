@@ -59,10 +59,10 @@ a{
 }
 
 
-html, body{
+body{
 
     background-image: none;
-    height: 100vh;
+    overflow: hidden;
 }
 
 @keyframes jiggle {

@@ -62,4 +62,5 @@ a{
 body{
 
     background-image: none;
+    overflow: hidden;
 }
