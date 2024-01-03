@@ -61,6 +61,13 @@
     width: 65%;
     color: white;
 }
+.txtContinue{
+    color: grey;
+    opacity: 25%;
+    margin-top: -85%;
+    font-size: 0.5em;
+    margin-left: 35%;
+}
 
 a {
     text-decoration: none;

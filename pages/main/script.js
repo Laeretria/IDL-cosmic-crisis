@@ -4,7 +4,7 @@ const coordinatesMap = {
     "parkbrug": ["51.230584764997616", "4.413111138538661"],
     "mas": ["51.22893720876868", "4.404670093096004"],
     "whisperer": ["51.22824318132135", "4.406100184553811"],
-    "havenhuis": ["51.23145696081982", "4.407370113413155"]
+    "londenbrug": ["51.23145696081982", "4.407370113413155"]
 }
 
 const stopHtmlMap = {
@@ -12,7 +12,7 @@ const stopHtmlMap = {
     "parkbrug": "../stop2-1/index.html",
     "mas": "../stop3-1/index.html",
     "whisperer": "../stop4-1/index.html",
-    "havenhuis": "../stop5-1/index.html"
+    "londenbrug": "../stop5-1/index.html"
 }
 
 const stopColorMap = {
@@ -23,7 +23,7 @@ const stopColorMap = {
     "4": "blue"
 }
 
-const stops = ["zna-cadix", "parkbrug", "mas", "whisperer", "havenhuis"];
+const stops = ["zna-cadix", "parkbrug", "mas", "whisperer", "londenbrug"];
 
 
 if(localStorage.getItem("stop") === "4") {
@@ -87,7 +87,7 @@ function success(position) {
     drawCoordinates(latitude, longitude, "51.22893720876868", "4.404670093096004", "red", "dot4");
     //whisperer 
     drawCoordinates(latitude, longitude, "51.22824318132135", "4.406100184553811", "yellow", "dot5");
-    //havenhuis
+    //londenbrug
     drawCoordinates(latitude, longitude, "51.23145696081982", "4.407370113413155", "blue", "dot6");
 
     const stopCoordinates = coordinatesMap[stops[localStorage.getItem("stop")]];
@@ -112,8 +112,3 @@ document.querySelector(".dot4").style.display = "none";
 document.querySelector(".dot5").style.display = "none";
 document.querySelector(".dot6").style.display = "none";
 navigator.geolocation.watchPosition(success, error, options);
-
-
-
-//const previousStop = localStorage.getItem("stop");
-//localStorage.setItem("stop", previousStop+1);
