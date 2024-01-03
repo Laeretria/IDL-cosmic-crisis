@@ -62,7 +62,7 @@ a{
 body{
 
     background-image: none;
-    overflow-x: hidden;
+    overflow-y: hidden; 
 }
 
 @keyframes jiggle {
