@@ -35,6 +35,22 @@ if(localStorage.getItem("stop") === "4") {
     } 
 }
 
+if(localStorage.getItem("stop") === "0") {
+    document.getElementById("main-image").src="../../images/stop1.png";
+}
+if(localStorage.getItem("stop") === "1") {
+    document.getElementById("main-image").src="../../images/stop2.png";
+}
+if(localStorage.getItem("stop") === "2") {
+    document.getElementById("main-image").src="../../images/stop3.png";
+}
+if(localStorage.getItem("stop") === "3") {
+    document.getElementById("main-image").src="../../images/stop4.png";
+}
+if(localStorage.getItem("stop") === "4") {
+    document.getElementById("main-image").src="../../images/stop5.png";
+}
+
 function drawCoordinates(baseLatitude, baseLongitude, latitude, longitude, color, className) {
     const precisionMultiplier = 1600;
     const offsetMultiplier = 10;
@@ -95,9 +111,12 @@ function success(position) {
     document.getElementsByClassName("distance-text")[0].innerText = distance.toString() + "m";
     document.getElementsByClassName("location-text")[0].innerHTML = "Navigate to <span id='location-colored'> " + stops[localStorage.getItem("stop")] + "</span>";
     document.getElementById('location-colored').style.color = stopColorMap[localStorage.getItem("stop")];
-    if(distance <= 50) {
+    if(distance <= 50 && localStorage.getItem("stop") != "3") {
         location.assign(stopHtmlMap[stops[localStorage.getItem("stop")]]);
-    }  
+    }
+    if(distance <= 10 && localStorage.getItem("stop") === "3") {
+        location.assign(stopHtmlMap[stops[localStorage.getItem("stop")]]);
+    }
 }
 
 
